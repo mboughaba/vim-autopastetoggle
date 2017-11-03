@@ -20,7 +20,7 @@
 " OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 " SOFTWARE.
 "
-if exists('g:autopastetoggle_autoloaded') || has("gui_running") || &cp || ve < 700
+if exists('g:autopastetoggle_autoloaded') || has("gui_running") || &cp || version < 700
     fini
 en
 

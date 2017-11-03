@@ -20,15 +20,15 @@
 " OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 " SOFTWARE.
 "
-if exists('g:autopastetoggle_loaded') || has("gui_running") || &cp || ve < 700
+if exists('g:autopastetoggle_loaded') || has("gui_running") || &cp || version < 700
     fini
 en
 
 "
 " Bracketed paste for ViM in terminal & ViM within GNU Screen
 "
-let l:screen  = &term =~ 'screen'
-let l:xterm   = &term =~ 'xterm'
+let s:screen  = &term =~ 'screen'
+let s:xterm   = &term =~ 'xterm'
 " TODO: Tmux
 if s:screen
     let &t_ti .= "\<Esc>P\<Esc>[?2004h\<Esc>\\"
